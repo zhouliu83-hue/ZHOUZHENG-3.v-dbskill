@@ -155,10 +155,7 @@ content（内容怎么做）
 
 ## 📚 资源链接
 
-- 🌐 原始仓库: https://github.com/dontbesilent2025/dbskill
-- 📱 Twitter/X: @dontbesilent2025
-- 📕 小红书: dontbesilent
-- 🎵 抖音: dontbesilent
+- 🎵 抖音: 周正朋友圈
 
 ---
 
