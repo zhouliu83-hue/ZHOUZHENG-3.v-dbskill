@@ -1,10 +1,10 @@
 # dbskill 商业诊断知识库
 
-> 周正 商业诊断工具箱 - 多格式兼容版本
+> 周正 商业诊断工具箱 
 > 
 # dbskill
 
-ZHOUZHENG 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 21 个 Agent skill。
+ZHOUZHENG 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 12个 Agent skill。
 
 可在 Claude Code、Codex、Cursor、Trae Solo 等任意支持 skill / system prompt 的 Agent 上使用。
 
@@ -46,12 +46,9 @@ bashnpx -y skills add ZHOUZHENG-3.v-dbskill -g --all
 
 #### Claude Code 插件市场安装的用户
 
-```bash
-claude plugin marketplace update ZHOUZHENG-3.v-dbskill
+```bashclaude plugin marketplace update ZHOUZHENG-3.v-dbskill
 
-claude plugin update dbs@ZHOUZHENG-3.v-dbskill
-
-/reload-plugins
+claude plugin update dbs@ZHOUZHENG-3.v-dbskill/reload-plugins
 ```
 
 #### 通过 `npx skills add` 安装的用户
@@ -109,7 +106,7 @@ dbskill-knowledge-base/
 
 ## 🚀 快速开始
 
-### 方式一：Claude Code / WorkBuddy 用户
+### 方式一：Claude Code / WorkBuddy / Codex 用户
 
 ```bash
 # 复制 skills 到对应目录
