@@ -45,13 +45,6 @@ claude plugin install ZHOUZHENG-3.v-dbskill
 npx -y skills add ZHOUZHENG-3.v-dbskill -g --all
 ```
 
-#### Trae Solo
-
-Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/ZHOUZHENG-3.v-dbskill/releases) 下载最新的 `dbskill-版本号.zip`，解压后里面是 21 个独立的 skill zip（每个 zip 解压后根级是 `SKILL.md`），逐个拖进 Trae Solo 的「上传技能」窗口即可。
-
-如果想本地构建，运行 `bash tools/build-skills.sh`，产物在 `dist/skills/`。
-
-
 ## 如何更新 dbskill
 
 #### Claude Code 插件市场安装的用户
@@ -68,12 +61,7 @@ claude plugin update dbs@ZHOUZHENG-3.v-dbskill
 
 重新运行一次同样的命令即可。安装和更新用的是同一条命令，不需要换成别的写法。
 
-```bash
-npx -y skills add ZHOUZHENG-3.v-dbskill
- -g --all
-```
-
----
+```bashnpx -y skills add ZHOUZHENG-3.v-dbskill-g --all
 
 ## 工具箱
 
