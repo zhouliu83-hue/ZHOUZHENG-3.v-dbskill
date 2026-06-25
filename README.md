@@ -12,7 +12,7 @@
 
 这是一个**多格式兼容的商业诊断知识库**，将 多个成功操盘手的商业智慧整理成：
 
-- **Claude Code / WorkBuddy Skills** - 直接复制到 `~/.claude/skills/` 或 `~/.workbuddy/skills/`
+- **Claude Code / WorkBuddy/codex Skills** - 直接复制到 `~/.claude/skills/` 或 `~/.workbuddy/skills/`
 - **JSON 知识库** - 便于 AI 处理和调用
 - **Markdown 文档** - 便于阅读和学习
 - **CSV 表格** - 便于数据分析
