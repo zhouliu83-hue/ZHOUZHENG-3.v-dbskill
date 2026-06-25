@@ -4,7 +4,7 @@
 > 
 # dbskill
 
-dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 21 个 Agent skill。
+ZHOUZHENG 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 21 个 Agent skill。
 
 可在 Claude Code、Codex、Cursor、Trae Solo 等任意支持 skill / system prompt 的 Agent 上使用。
 
