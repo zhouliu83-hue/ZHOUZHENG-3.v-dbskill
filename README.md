@@ -57,8 +57,10 @@ Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/
 #### Claude Code 插件市场安装的用户
 
 ```bash
-claude plugin marketplace update dontbesilent-skills
-claude plugin update dbs@dontbesilent-skills
+claude plugin marketplace update ZHOUZHENG-3.v-dbskill
+
+claude plugin update dbs@ZHOUZHENG-3.v-dbskill
+
 /reload-plugins
 ```
 
@@ -67,7 +69,8 @@ claude plugin update dbs@dontbesilent-skills
 重新运行一次同样的命令即可。安装和更新用的是同一条命令，不需要换成别的写法。
 
 ```bash
-npx -y skills add dontbesilent2025/dbskill -g --all
+npx -y skills add ZHOUZHENG-3.v-dbskill
+ -g --all
 ```
 
 ---
