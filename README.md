@@ -2,23 +2,103 @@
 
 > 周正 商业诊断工具箱 - 多格式兼容版本
 > 
-> 📚 从 12,307 条推文中提炼的商业智慧
-> 
-> ⭐ 4,000+ Stars | 🔧 16 个诊断工具 | 📋 4,176 个知识原子
+# dbskill
+
+dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 21 个 Agent skill。
+
+可在 Claude Code、Codex、Cursor、Trae Solo 等任意支持 skill / system prompt 的 Agent 上使用。
+
+**最新更新：v2.14.2**
+
+**v2.14.2 更新**：优化 `/dbs-chatroom` 的推荐人物规则。推荐专家时不再靠固定名单或泛名人直觉，改为先判断话题缺什么视角，再选择真正能推进讨论的人；同时明确排除泛财经、泛商业、靠表达和传播出名但判断密度偏弱的人。
+
+**v2.14.1 更新**：修复 `/dbs-content-system` 发布包缺少 `scaffold/root/AGENTS.md`、`CLAUDE.md`、`SOURCE_OF_TRUTH.md` 的问题。`v2.14.0` 新增了正式版内容结构化系统，本版本补齐初始化脚本依赖的根级脚手架文件。
+
+近期几次更新集中在 5 个方向：
+- 内容工程：新增内容结构化系统，支持把大量本地素材搭成可继续生长的内容资产工程
+- Agent 工作台迁移：支持 Grok Build，统一三端迁移语境
+- 决策系统：从业务决策记录扩展成通用个人决策系统
+- 学习与提问：新增 `dbs-learning`、`dbs-good-question`
+- 状态管理：补齐 `dbs-save`、`dbs-restore`、`dbs-report`
+
+更完整的历史变更，见 [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases)。
+
+**作者**：[X](https://x.com/dontbesilent) · [小红书](https://xhslink.com/m/637xuspR4iI) · [抖音](https://v.douyin.com/pRUDhpBqOrc/)
+
+**所有内容开放，可以整套装，也可以只拿一部分。知识包、原子库、单个公理，都能单独用。**
 
 ---
 
-## 🎯 这是什么？
+## 如何安装 dbskill
 
-这是一个**多格式兼容的商业诊断知识库**，将 多个成功操盘手的商业智慧整理成：
+![demo](demo.gif)
 
-- **Claude Code / WorkBuddy/codex Skills** - 直接复制到 `~/.claude/skills/` 或 `~/.workbuddy/skills/`
-- **JSON 知识库** - 便于 AI 处理和调用
-- **Markdown 文档** - 便于阅读和学习
-- **CSV 表格** - 便于数据分析
-- **提示词模板** - 快速开始使用
+#### Claude Code
+
+```bash
+claude plugin marketplace add dontbesilent2025/dbskill
+claude plugin install dbs@dontbesilent-skills
+```
+
+#### 通用安装方式（适用于 Codex / Claude Code）
+
+```bash
+npx -y skills add dontbesilent2025/dbskill -g --all
+```
+
+#### Trae Solo
+
+Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases) 下载最新的 `dbskill-版本号.zip`，解压后里面是 21 个独立的 skill zip（每个 zip 解压后根级是 `SKILL.md`），逐个拖进 Trae Solo 的「上传技能」窗口即可。
+
+如果想本地构建，运行 `bash tools/build-skills.sh`，产物在 `dist/skills/`。
+
+
+## 如何更新 dbskill
+
+#### Claude Code 插件市场安装的用户
+
+```bash
+claude plugin marketplace update dontbesilent-skills
+claude plugin update dbs@dontbesilent-skills
+/reload-plugins
+```
+
+#### 通过 `npx skills add` 安装的用户
+
+重新运行一次同样的命令即可。安装和更新用的是同一条命令，不需要换成别的写法。
+
+```bash
+npx -y skills add dontbesilent2025/dbskill -g --all
+```
 
 ---
+
+## 工具箱
+
+### dbs 诊断工具
+
+| Skill | 做什么 |
+|---|---|
+| `/dbs` | 主入口，自动路由到对的工具 |
+| `/dbs-diagnosis` | 商业模式诊断。消解问题，不回答问题 |
+| `/dbs-benchmark` | 对标分析。五重过滤，排除噪音 |
+| `/dbs-content` | 内容创作诊断。五维检测 |
+| `/dbs-content-system` | 内容结构化系统。把本地大量内容资产搭成一个可持续生长的内容工程 |
+| `/dbs-hook` | 短视频开头优化。诊断 + 生成方案 |
+| `/dbs-xhs-title` | 小红书标题公式。75 个爆款公式匹配 |
+| `/dbs-ai-check` | AI 写作特征识别。22 条特征扫描，只诊断不改 |
+| `/dbs-slowisfast` | 慢就是快。摩擦建造资产，找到值得慢做的环节 |
+| `/dbs-action` | 执行力诊断。阿德勒框架（原 dbs-unblock） |
+| `/dbs-deconstruct` | 概念拆解。维特根斯坦式审查 |
+| `/dbs-goal` | 目标清晰化。把模糊目标审计成可检查的交付物 |
+| `/dbs-good-question` 或 `/好问题` | 好问题生成器。把模糊问题改成 Agent 可推理、可批评、可验证的问题说明书 |
+| `/dbs-decision` 或 `/决策系统` | 个人决策系统。把任何长期跟踪的领域做成本地知识工程，四层结构 + 来源标签 + 隐私模式 |
+
+### 学习工具
+
+| Skill | 做什么 |
+|---|---|
+| `/dbs-learning` 或 `/dbs-learn` | 交互式学习。把课题拆成连续文章，根据上一篇反馈生成下一篇 |
 
 ## 📂 目录结构
 
